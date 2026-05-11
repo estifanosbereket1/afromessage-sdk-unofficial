@@ -1,7 +1,5 @@
 # afromessage-ts
 
-TypeScript SDK for the [AfroMessage](https://afromessage.com) SMS & OTP API.
-
 Note: This is an unofficial, community-maintained TypeScript SDK for the [AfroMessage](https://afromessage.com) API. It is not formally affiliated with or endorsed by [AfroMessage](https://afromessage.com).
 
 ## Installation
