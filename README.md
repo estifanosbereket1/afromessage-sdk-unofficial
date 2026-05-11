@@ -6,10 +6,14 @@
 
 ```bash
 # npm
-npm install afromessage-ts
+git clone git@github.com:estifanosbereket1/afromessage-sdk-unofficial.git
+cd afromessage-sdk-unofficial.git
+npm i path/to/file/afromessage-ts
 
 # pnpm
-pnpm add afromessage-ts
+git clone git@github.com:estifanosbereket1/afromessage-sdk-unofficial.git
+cd afromessage-sdk-unofficial.git
+pnpm add path/to/file/afromessage-ts
 ```
 
 ## Quick start
