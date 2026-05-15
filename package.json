@@ -1,6 +1,6 @@
 {
   "name": "afromessage-unofficial-ts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unofficial TypeScript SDK for the AfroMessage SMS & OTP API",
   "author": "Estifanos",
   "license": "MIT",
