@@ -20,7 +20,7 @@ describe("sms.send()", () => {
       message: "Hello Estifanos",
     });
 
-    expect(result.acknowledge).toBe("Success");
+    expect(result.acknowledge).toBe("success");
 
     if (result.acknowledge === "success") {
       expect(result.response).toBe("msg-id-123");
@@ -45,7 +45,7 @@ describe("sms.send()", () => {
     server.use(
       http.get(`${BASE_URL}/api/send`, ({ request }) => {
         capturedAuth = request.headers.get("Authorization");
-        return HttpResponse.json({ acknowledge: "Success", response: "ok" });
+        return HttpResponse.json({ acknowledge: "success", response: "ok" });
       }),
     );
 
@@ -60,7 +60,7 @@ describe("sms.bulk()", () => {
       to: ["+251912345678", "+251987654321"],
       message: "Broadcast message",
     });
-    expect(result.acknowledge).toBe("Success");
+    expect(result.acknowledge).toBe("success");
   });
 
   it("handles personalized bulk SMS", async () => {
@@ -70,7 +70,7 @@ describe("sms.bulk()", () => {
         { to: "+251987654321", message: "Hi Abebe" },
       ],
     });
-    expect(result.acknowledge).toBe("Success");
+    expect(result.acknowledge).toBe("success");
   });
 
   it("throws AfroValidationError if any phone in bulk is invalid", async () => {

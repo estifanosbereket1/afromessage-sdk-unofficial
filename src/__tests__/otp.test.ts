@@ -17,7 +17,7 @@ describe("otp.challenge()", () => {
   it("returns a verificationId on success", async () => {
     const result = await client.otp.challenge({ to: "+251912345678" });
 
-    expect(result.acknowledge).toBe("Success");
+    expect(result.acknowledge).toBe("success");
 
     if (result.acknowledge === "success") {
       expect(result.response.verificationId).toBe("ver-id-789");
@@ -52,7 +52,7 @@ describe("otp.verify()", () => {
       code: "1234",
     });
 
-    expect(result.acknowledge).toBe("Success");
+    expect(result.acknowledge).toBe("success");
 
     if (result.acknowledge === "success") {
       expect(result.response).toBe("Verified");
@@ -63,7 +63,7 @@ describe("otp.verify()", () => {
     server.use(
       http.get(`${BASE_URL}/api/verify`, () => {
         return HttpResponse.json({
-          acknowledge: "Success",
+          acknowledge: "success",
           response: "Not Verified",
         });
       }),

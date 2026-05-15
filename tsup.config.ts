@@ -8,6 +8,7 @@ export default defineConfig({
   sourcemap: true,
   cjsInterop: true,
   splitting: false,
+  treeshake: true,
   outExtension({ format }) {
     return {
       js: format === "esm" ? ".mjs" : ".js",

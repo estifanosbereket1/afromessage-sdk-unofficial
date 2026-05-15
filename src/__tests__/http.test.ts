@@ -19,7 +19,7 @@ describe("request()", () => {
       "/api/send",
       { params: { to: "+251912345678", message: "hi" } },
     );
-    expect(result.acknowledge).toBe("Success");
+    expect(result.acknowledge).toBe("success");
   });
 
   it("throws AfroAuthError on 401", async () => {
@@ -79,7 +79,7 @@ describe("request()", () => {
     server.use(
       http.get(`${BASE_URL}/api/send`, ({ request }) => {
         capturedUrl = request.url;
-        return HttpResponse.json({ acknowledge: "Success", response: "ok" });
+        return HttpResponse.json({ acknowledge: "success", response: "ok" });
       }),
     );
 
